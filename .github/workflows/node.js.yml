@@ -24,6 +24,7 @@ jobs:
           path: public/
         
   test:
+    needs: build
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -44,4 +45,4 @@ jobs:
         npm install
         npm test
       env:
-        CI: true   
+        CI: true
